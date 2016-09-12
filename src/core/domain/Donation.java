@@ -21,5 +21,53 @@ public class Donation implements Serializable {
 		this.estimate = estimate;
 		this.tax_deductible = (long) ((.3) * estimate);
 	}
+	
+	public long getId() {
+        return donationId;
+    }
+
+    public long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(long userId) {
+        this.userId = userId;
+    }
+
+    public String getDescription() {
+        return desc;
+    }
+
+    public void setDescription(String title) {
+        this.desc = desc;
+    }
+    
+    public long getEstimate() {
+        return estimate;
+    }
+
+    public void setEstimate(long estimate) {
+        this.estimate = estimate;
+    }
+
+    public long getTaxDeductible() {
+        return tax_deductible;
+    }
+
+    /*public void setTaxDeductible(long userId) {
+        this.userId = userId;
+    }*/
+    
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Todo{");
+        sb.append("id=").append(donationId);
+        sb.append(", userId=").append(userId);
+        sb.append(", description='").append(desc).append('\'');
+        sb.append(", estimatedValue=").append(estimate);
+        sb.append(", taxDeductibel=").append(tax_deductible);
+        sb.append('}');
+        return sb.toString();
+    }
 
 }

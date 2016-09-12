@@ -1,18 +1,20 @@
-package core.repository.api;
+package core.service.api;
+
 import core.domain.Donation;
 import java.util.List;
 
-public interface taxestimatorRepository {
-	
+public interface DonationService {
+
 	Donation getDonationById(final long donationId);
 	
 	List<Donation> getDonationListByUser(final long userId);
-	
-	Donation create(final Donation don);
-	
+	 
 	Donation update(Donation don);
-	
+	 
+	Donation create(final Donation don);
+	 
 	void remove(final Donation don);
+	 
 	
 
 }
