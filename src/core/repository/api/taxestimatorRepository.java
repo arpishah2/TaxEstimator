@@ -3,8 +3,8 @@ import core.domain.Donation;
 import java.util.List;
 
 public interface taxestimatorRepository {
-
-	Donation getDonationById(final long did);
+	
+	Donation getDonationById(final long donationId);
 	
 	List<Donation> getDonationListByUser(final long userId);
 	
