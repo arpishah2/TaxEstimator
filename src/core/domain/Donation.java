@@ -11,6 +11,7 @@ public class Donation implements Serializable {
 	private String desc;
 	private long estimate;
 	private long tax_deductible;
+	private int year;
 
 	public Donation() {
 	}
@@ -54,6 +55,13 @@ public class Donation implements Serializable {
         return tax_deductible;
     }
 
+    public int getYear(){
+    	return year;
+    }
+    
+    public void setYear(int yyyy){
+    	year = yyyy;
+    }
     /*public void setTaxDeductible(long userId) {
         this.userId = userId;
     }*/

@@ -26,6 +26,11 @@ public class DonationServiceImpl implements DonationService {
 	}
 
 	@Override
+	public List<Donation> getDonationListByUserAndYear(long userId, int year) {
+		return donationRepository.getDonationListByUserAndYear(userId, year);
+	}
+	
+	@Override
 	public Donation update(Donation don) {
 		return donationRepository.update(don);
 	}
@@ -38,7 +43,6 @@ public class DonationServiceImpl implements DonationService {
 	@Override
 	public void remove(Donation don) {
 		donationRepository.remove(don);
-		
 	}
 
 }

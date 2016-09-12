@@ -8,6 +8,8 @@ public interface DonationRepository {
 	
 	List<Donation> getDonationListByUser(final long userId);
 	
+	List<Donation> getDonationListByUserAndYear(final long userId, final long year);
+	
 	Donation create(final Donation don);
 	
 	Donation update(Donation don);

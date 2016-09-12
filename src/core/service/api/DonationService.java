@@ -8,6 +8,8 @@ public interface DonationService {
 	Donation getDonationById(final long donationId);
 	
 	List<Donation> getDonationListByUser(final long userId);
+	
+	List<Donation> getDonationListByUserAndYear(final long userId, final int year);
 	 
 	Donation update(Donation don);
 	 
@@ -15,6 +17,4 @@ public interface DonationService {
 	 
 	void remove(final Donation don);
 	 
-	
-
 }

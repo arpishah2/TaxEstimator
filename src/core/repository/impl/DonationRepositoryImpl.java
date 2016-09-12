@@ -27,6 +27,13 @@ public class DonationRepositoryImpl implements DonationRepository {
         return query.getResultList();
 	}
 
+	public List<Donation> getDonationListByUserAndYear(final long userId, final long year){
+		TypedQuery<Donation> query = entityManager.createNamedQuery("findTodosByUserAndYear", Donation.class);
+		query.setParameter(1, userId);
+		query.setParameter(2, year);
+		return query.getResultList();
+	}
+	
 	@Override
 	public Donation create(Donation don) {
 		entityManager.persist(don);
@@ -43,6 +50,7 @@ public class DonationRepositoryImpl implements DonationRepository {
 		Donation d = entityManager.find(Donation.class, don.getId());
         entityManager.remove(d);
 	}
+
 
 	
 }
